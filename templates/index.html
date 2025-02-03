@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel ou Tesoura</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="fundo">
+        <!-- Entrada do Nome -->
+        <div class="entrada-nome">
+            <h1>Digite seu Nome</h1>
+            <input type="text" id="nome-jogador" placeholder="Seu nome">
+            <button onclick="iniciarJogo()">Começar</button>
+        </div>
+
+        <!-- Escolha do Modo -->
+        <div class="escolha-modo" style="display: none;">
+            <h1>Escolha o Modo de Jogo</h1>
+            <button onclick="selecionarModo('maquina')">Jogar Contra Máquina</button>
+        </div>
+
+        <!-- Área do Jogo -->
+        <div class="container" id="jogo-container" style="display: none;">
+            <h1>Pedra, Papel ou Tesoura</h1>
+            <div class="opcoes">
+                <div class="opcao">
+                    <img src="/static/imagens/pedra.png" alt="Pedra" data-escolha="pedra" class="imagem-opcao" onclick="jogar('pedra')">
+                    <p>Pedra</p>
+                </div>
+                <div class="opcao">
+                    <img src="/static/imagens/papel.png" alt="Papel" data-escolha="papel" class="imagem-opcao" onclick="jogar('papel')">
+                    <p>Papel</p>
+                </div>
+                <div class="opcao">
+                    <img src="/static/imagens/tesoura.png" alt="Tesoura" data-escolha="tesoura" class="imagem-opcao" onclick="jogar('tesoura')">
+                    <p>Tesoura</p>
+                </div>
+            </div>
+            <div class="jogo">
+                <!-- Escolha do Jogador -->
+                <div class="mao" id="mao-jogador"></div>
+
+                <!-- VS -->
+                <div class="vs-container">
+                    <h1 class="vs-text">VS</h1>
+                </div>
+
+                <!-- Escolha da Máquina -->
+                <div class="mao" id="mao-maquina"></div>
+            </div>
+            <h2 id="resultado"></h2>
+
+            <!-- Ranking -->
+            <div class="ranking">
+                <h2>Ranking</h2>
+                <ul id="lista-ranking"></ul>
+                <button class="botao-voltar" onclick="voltarInicio()">Trocar Jogador</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

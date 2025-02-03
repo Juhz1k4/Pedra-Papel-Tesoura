@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: url('/static/imagens/fundo-criancas.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.fundo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.entrada-nome, .escolha-modo {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.entrada-nome h1, .escolha-modo h1 {
+    font-size: 24px;
+    color: #4A90E2;
+}
+
+.entrada-nome input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    width: 80%;
+}
+
+.entrada-nome button, .escolha-modo button {
+    background: #4A90E2;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.entrada-nome button:hover, .escolha-modo button:hover {
+    background: #357ABD;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    width: 90%;
+    max-width: 600px;
+}
+
+.opcoes {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.imagem-opcao {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.imagem-opcao:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.jogo {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.mao {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: balancar 0.5s infinite alternate;
+}
+
+@keyframes balancar {
+    from {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+.ranking {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ranking p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.botao-voltar, .botao-resetar {
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.botao-voltar:hover, .botao-resetar:hover {
+    background: linear-gradient(90deg, #388E3C, #4CAF50);
+}
+
+.lista-jogadores {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 250px;
+    text-align: left;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.lista-jogadores h2 {
+    font-size: 18px;
+    color: #4A90E2;
+}
+
+.lista-jogadores ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-jogadores li {
+    font-size: 16px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
